@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+}
+.App{
+  height: 100vh;
+  background-color: hsl(218, 23%, 16%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-app{
+  position: relative;
+  padding: 50px;
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 15px;
+  min-height: 232px;
+  width: 441px;
+  text-align: center;
+}
+.title-id{
+  color: hsl(150, 100%, 66%);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+.text-card{
+  margin-top: 25px;
+  min-height: 115px;
+}
+.text-card h2{
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 38px;
+  color: hsl(193, 38%, 86%);
+}
+.separator{
+  margin-top: 40px;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  background-color: hsl(150, 100%, 66%);
+  bottom: -32px;
+  left: 238px;
+  cursor: pointer;
+}
+.rotate-n{
+  animation: none;
+}
+.rotate{
+  animation:rotate-center 1s;
+}
+@keyframes rotate-center{0%{transform:rotate(10)}100%{transform:rotate(1000deg)}}
+
+.button:hover{
+  box-shadow: hsl(150, 100%, 66%) 0px 0px 30px 7px;
+}
+.separator-movil{
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .container-app{
+    padding: 40px 25px;
+    border-radius: 10px;
+    min-height: 232px;
+    width: 293px;
+  }
+  .title-id{
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 0.34em;
+  }
+  .text-card{
+    margin: 25px 0;
+  }
+  .text-card h2{
+    font-size: 24px;
+    line-height: 33px;
+  }
+  .separator{
+    display: none;
+  }
+  .separator-movil{
+    display: initial;
+  }
+  .button{
+    left: 139px;
+  }
+}
